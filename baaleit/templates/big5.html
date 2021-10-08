@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section id="pricing" class="padd-section text-cente">
+
+  <div class="container" data-aos="fade-up">
+    <div class="section-title text-center">
+
+      <h2>The Big 5</h2>
+      <!-- <p class="separator">Integer cursus bibendum augue ac cursus .</p> -->
+    </div>
+    
+    <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="col-md-6 col-lg-3">
+        <div class="block-pricing">
+          <div class="table">
+            <h4>Shabbat</h4>
+            
+            <img src="{% static 'assets/img/candles.png' %}" style="width: 25%;" class="img-fluid" alt="">
+            <!-- <h2>$29</h2> -->
+            <ul class="list-unstyled">
+              {% for thing in thebig5 %}
+              {% if thing.name == 'Shabbat' and thing.submenu == True%}
+              <a href="./topic/{{thing.id}}"><li>{{thing.namesub}}</li></a>
+              {% elif thing.name == 'Shabbat' and thing.submenu == False %}
+              <a href="{{thing.link}}"><li>{{thing.namesub}}</li></a>
+              {% for sb in sublink %}
+              {% if sb.name == thing.namesub %}
+                <!-- <li>{{sb.subItems}} {{sb.name}}</li> -->
+              {% endif %}
+              {% endfor %}
+              
+              {% endif %}
+              {% endfor %}
+            </ul>
+            <!-- <div class="table_btn">
+              <a href="#" class="btn"><i class="bi bi-cart"></i> Buy Now</a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="block-pricing">
+          <div class="table">
+            <h4>Davening</h4>
+            <img src="{% static 'assets/img/tallit.png' %}" style="width: 25%;" class="img-fluid" alt="">
+            
+            <ul class="list-unstyled">
+              {% for thing in thebig5 %}
+              {% if thing.name == 'Davening' and thing.submenu == True%}
+              <a href="./topic/{{thing.id}}"><li>{{thing.namesub}}</li></a>
+              {% elif thing.name == 'Davening' and thing.submenu == False %}
+              <a href="{{thing.link}}"><li>{{thing.namesub}}</li></a>
+              {% for sb in sublink %}
+              {% if sb.name == thing.namesub %}
+                <!-- <li>{{sb.subItems}} {{sb.name}}</li> -->
+              {% endif %}
+              {% endfor %}
+              
+              {% endif %}
+              {% endfor %}
+            </ul>
+            <!-- <div class="table_btn">
+              <a href="#" class="btn"><i class="bi bi-cart"></i> Buy Now</a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="block-pricing">
+          <div class="table">
+            <h4>Kashrus</h4>
+            <img src="{% static 'assets/img/kosher.png' %}" style="width: 25%;" class="img-fluid" alt="">
+            <ul class="list-unstyled">
+              {% for thing in thebig5 %}
+              {% if thing.name == 'Kashrus' and thing.submenu == True%}
+              <a href="./topic/{{thing.id}}"><li>{{thing.namesub}}</li></a>
+              {% elif thing.name == 'Kashrus' and thing.submenu == False %}
+              <a href="{{thing.link}}"><li>{{thing.namesub}}</li></a>
+              {% for sb in sublink %}
+              {% if sb.name == thing.namesub %}
+                <!-- <li>{{sb.subItems}} {{sb.name}}</li> -->
+              {% endif %}
+              {% endfor %}
+              
+              {% endif %}
+              {% endfor %}
+            </ul>
+            <!-- <div class="table_btn">
+              <a href="#" class="btn"><i class="bi bi-cart"></i> Buy Now</a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="block-pricing">
+          <div class="table">
+            <h4>Tefillin</h4>
+            <img src="{% static 'assets/img/tefillin.png' %}" style="width: 25%;" class="img-fluid" alt="">
+            <ul class="list-unstyled">
+              {% for thing in thebig5 %}
+              {% if thing.name == 'Tefillin' and thing.submenu == True%}
+              <a href="./topic/{{thing.id}}"><li>{{thing.namesub}}</li></a>
+              {% elif thing.name == 'Tefillin' and thing.submenu == False %}
+              <a href="{{thing.link}}"><li>{{thing.namesub}}</li></a>
+              {% for sb in sublink %}
+              {% if sb.name == thing.namesub %}
+                <!-- <li>{{sb.subItems}} {{sb.name}}</li> -->
+              {% endif %}
+              {% endfor %}
+              
+              {% endif %}
+              {% endfor %}
+            </ul>
+            <!-- <div class="table_btn">
+              <a href="#" class="btn"><i class="bi bi-cart"></i> Buy Now</a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="block-pricing">
+          <div class="table">
+            <h4>Taharas Mishpacha</h4>
+            <img src="{% static 'assets/img/jewish-wedding.png' %}" style="width: 25%;" class="img-fluid" alt="">
+            <ul class="list-unstyled">
+              {% for thing in thebig5 %}
+              {% if thing.name == 'Taharas Mishpacha' and thing.submenu == True%}
+              <a href="./topic/{{thing.id}}"><li>{{thing.namesub}}</li></a>
+              {% elif thing.name == 'Taharas Mishpacha' and thing.submenu == False %}
+              <a href="{{thing.link}}"><li>{{thing.namesub}}</li></a>
+              {% for sb in sublink %}
+              {% if sb.name == thing.namesub %}
+                <!-- <li>{{sb.subItems}} {{sb.name}}</li> -->
+              {% endif %}
+              {% endfor %}
+              
+              {% endif %}
+              {% endfor %}
+            </ul>
+            <!-- <div class="table_btn">
+              <a href="#" class="btn"><i class="bi bi-cart"></i> Buy Now</a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!-- End Pricing Section -->
+
+{% endblock %}

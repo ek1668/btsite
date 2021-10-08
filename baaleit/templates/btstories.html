@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+              
+              <!-- ======= Blog Section ======= -->
+   <section id="blog" class="padd-sectio">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+
+          <h2>BT Stories</h2>
+          
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          
+          <div class="col-md-6 col-lg-4">
+            {% for b1 in btone %}
+            <a href="./btone">
+            <div class="block-blog text-left">
+              <img src="{{b1.img.url}}" alt="img">
+              <div class="content-blog">
+                <h4><a href="#">{{b1.name}}</a></h4>
+                <h5>{{b1.job}}</h5>
+                <span>{{b1.description}}</span>
+                <a class="float-end readmore" href="#">read more</a>
+              </div>
+            </div>
+          </a>
+          {% endfor %}
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            {% for b2 in bttwo %}
+            <a href="./bttwo">
+            <div class="block-blog text-left">
+              <img src="{{b2.img.url}}" alt="img">
+              <div class="content-blog">
+                <h4><a href="#">{{b2.name}}</a></h4>
+                <h5>{{b2.job}}</h5>
+                <span>{{b2.description}}</span>
+                <a class="float-end readmore" href="#">read more</a>
+              </div>
+            </div>
+          </a>
+          {% endfor %}
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            {% for b3 in btthree %}
+            <a href="./btthree">
+            <div class="block-blog text-left">
+              <img src="{{b3.img.url}}" alt="img">
+              <div class="content-blog">
+                <h4><a href="#">{{b3.name}}</a></h4>
+                <h5>{{b3.job}}</h5>
+                <span>{{b3.description}}</span>
+                <a class="float-end readmore" href="#">read more</a>
+              </div>
+            </div>
+          </a>
+          {% endfor %}
+          </div>
+          
+          
+
+        </div>
+      </div>
+    </section>
+    <!-- End Blog Section --> 
+
+
+
+    {% endblock %}

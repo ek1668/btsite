@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<section>
+  <div>
+      <h2 class="mb-5" style="margin-top: 20%;">Blog</h2>
+      
+      <div style="background-color: white; padding: 20px; margin-top: 20px;">
+          <div class="flex-grow-1">
+            <a href=".//{{post.id}}">
+              <!-- <h3 class="mb-0">{{post.title}}</h3>
+              <p>{{post.body|truncatewords:20}}</p> -->
+              <h3>THIS IS A TITLE</h3>
+              <p>This is a blog post</p>
+            </a>
+          </div>
+          
+              <div class="flex-shrink-0"><span class="text-primary">Created at Today</span></div>
+         
+      </div>
+     
+  </div>
+</section>
+{% endblock %}

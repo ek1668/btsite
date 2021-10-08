@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<section id="pricing" class="padd-section text-cente">
+
+  <div class="container" data-aos="fade-up">
+    <div class="section-title text-center">
+
+      <h2>Learning</h2>
+      <!-- <p class="separator">Integer cursus bibendum augue ac cursus .</p> -->
+    </div>
+
+    <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="col-md-6 col-lg-4">
+        <div class="block-pricing">
+          <div class="table">
+            <h4>Shiurim</h4>
+            <!-- <h2>$28</h2> -->
+            <img src="{% static 'assets/img/talmud.png' %}" style="width: 25%;" class="img-fluid" alt="">
+            <!-- <h2>$29</h2> -->
+            <ul class="list-unstyled">
+              {% for thing in learning %}
+              {% if thing.name == 'Shiurim' and thing.submenu == True%}
+              <a href="./learningtopic/{{thing.id}}"><li>{{thing.namesub}}</li></a>
+              {% elif thing.name == 'Shiurim' and thing.submenu == False %}
+              <a href="{{thing.link}}"><li>{{thing.namesub}}</li></a>
+              {% for sb in sublinklearning %}
+              {% if sb.name == thing.namesub %}
+                <!-- <li>{{sb.subItems}} {{sb.name}}</li> -->
+              {% endif %}
+              {% endfor %}
+              
+              {% endif %}
+              {% endfor %}
+            </ul>
+            <!-- <div class="table_btn">
+              <a href="#" class="btn"><i class="bi bi-cart"></i> Buy Now</a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="block-pricing">
+          <div class="table">
+            <h4>1-on-1 Connections</h4>
+            <!-- <h2>$29</h2> -->
+            <img src="{% static 'assets/img/interview.png' %}" style="width: 25%;" class="img-fluid" alt="">
+            <!-- <h2>$29</h2> -->
+            <ul class="list-unstyled">
+              {% for thing in learning %}
+              {% if thing.name == '1-on-1 Connections' and thing.submenu == True%}
+              <a href="./learningtopic/{{thing.id}}"><li>{{thing.namesub}}</li></a>
+              {% elif thing.name == '1-on-1 Connections' and thing.submenu == False %}
+              <a href="{{thing.link}}"><li>{{thing.namesub}}</li></a>
+              {% for sb in sublinklearning %}
+              {% if sb.name == thing.namesub %}
+                <!-- <li>{{sb.subItems}} {{sb.name}}</li> -->
+              {% endif %}
+              {% endfor %}
+              
+              {% endif %}
+              {% endfor %}
+            </ul>
+            <!-- <div class="table_btn">
+              <a href="#" class="btn"><i class="bi bi-cart"></i> Buy Now</a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="block-pricing">
+          <div class="table">
+            <h4>Mailing List</h4>
+            <!-- <h2>$29</h2> -->
+            <img src="{% static 'assets/img/newsletter.png' %}" style="width: 25%;" class="img-fluid" alt="">
+            <!-- <h2>$29</h2> -->
+            <ul class="list-unstyled">
+              {% for thing in learning %}
+              {% if thing.name == 'Mailing List' and thing.submenu == True%}
+              <a href="./learningtopic/{{thing.id}}"><li>{{thing.namesub}}</li></a>
+              {% elif thing.name == 'Mailing List' and thing.submenu == False %}
+              <a href="{{thing.link}}"><li>{{thing.namesub}}</li></a>
+              {% for sb in sublinklearning %}
+              {% if sb.name == thing.namesub %}
+                <!-- <li>{{sb.subItems}} {{sb.name}}</li> -->
+              {% endif %}
+              {% endfor %}
+              
+              {% endif %}
+              {% endfor %}
+            </ul>
+            <!-- <div class="table_btn">
+              <a href="#" class="btn"><i class="bi bi-cart"></i> Buy Now</a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+</section><!-- End Pricing Section -->
+
+{% endblock %}

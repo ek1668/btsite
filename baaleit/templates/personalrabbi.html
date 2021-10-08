@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<section id="testimonials" class="padd-section text-cente" style="margin-top: 50px;">
+  <div class="container" data-aos="fade-up">
+    <div class="row justify-content-center">
+
+      <div class="col-md-8">
+
+        <div class="testimonials-content">
+          <div id="carousel-example-generic" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-inner" role="listbox">
+              <div class="section-title text-center">
+                <h2 style="text-emphasis-color: #012646;">
+                  Connect With A Rabbi
+                </h2>
+                <p>
+                  I know when I was first connecting to Judaism I was uncomfortable speaking with 
+                  people in person, if you feel the same way and are interested in being put in contact with 
+                  someone who can guide you on your journey, please fill out the below questionnaire.
+                </p><br>
+                <form action="" method="POST" style="padding-left: 10%; padding-right: 10%;">
+                {% csrf_token %}
+                <div class="row">
+                  <div class="col-md-6 col-lg-6">
+                    <p><input type="text" name="firstname" placeholder="First Name"></p>
+                    <p><input type="text" name="lastname" placeholder="Last Name"></p>
+                    <p><input type="text" name="age" placeholder="Age"></p>
+                    <p><input type="email" name="email" placeholder="E-mail"></p>
+                    
+                  </div>
+                  <div class="col-md-6 col-lg-6">
+                    <p><input type="tel" name="phone" placeholder="Phone"></p>
+                    <p><input type="text" name="relationshipstatus" placeholder="Relationship Status"></p>
+                    <p><input type="text" name="background" placeholder="Religious Background"></p>
+                    <p><input type="text" name="location" placeholder="Location"></p>
+                  </div>
+                  
+                </div>
+                
+                
+                
+                <p><input type="submit" value="Submit" style="background-color: #012646; color:white;"></p>
+        
+        
+                </form>
+              </div>
+            </div>
+          </div>
+    
+        </div>
+        </div>
+    </div>
+  </div> 
+  
+  
+</section>
+{% endblock %}
