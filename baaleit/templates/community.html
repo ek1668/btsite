@@ -47,7 +47,7 @@
           <div class="table">
             <h4>Synagogues</h4>
             <!-- <h2>$29</h2> -->
-            <img src="{% static 'assets/img/synagogue.png' %}" style="width: 25%;" class="img-fluid" alt="">
+            <img src="{% static 'assets/img/synagogue (2).png' %}" style="width: 25%;" class="img-fluid" alt="">
             <!-- <h2>$29</h2> -->
             <ul class="list-unstyled">
               {% for thing in community %}
@@ -136,9 +136,9 @@
             <!-- <h2>$29</h2> -->
             <ul class="list-unstyled">
               {% for thing in community %}
-              {% if thing.name == 'Campus Life' and thing.submenu == True%}
+              {% if thing.name == 'Death and Bereavment' and thing.submenu == True%}
               <a href="./communitytopic/{{thing.id}}"><li>{{thing.namesub}}</li></a>
-              {% elif thing.name == 'Campus Life' and thing.submenu == False %}
+              {% elif thing.name == 'Death and Bereavment' and thing.submenu == False %}
               <a href="{{thing.link}}"><li>{{thing.namesub}}</li></a>
               {% for sb in sublinkcommunity %}
               {% if sb.name == thing.namesub %}
