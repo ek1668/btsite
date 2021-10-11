@@ -231,6 +231,7 @@ class Post(models.Model):
   created_at = models.DateTimeField(default=datetime.now, blank=True)
 
 class BTOnePost(models.Model):
+  img = models.ImageField(upload_to='pics/', default="C:\DjangoStuff\baaleiteshuva\baaleit\static\assets\img\reading.png")
   title = models.CharField(max_length=100)
   body = models.CharField(max_length=1000000)
   created_at = models.DateTimeField(default=datetime.now, blank=True)
@@ -242,6 +243,7 @@ class BTOnePost(models.Model):
     return self.title
 
 class BTTwoPost(models.Model):
+  img = models.ImageField(upload_to='pics/', default="C:\DjangoStuff\baaleiteshuva\baaleit\static\assets\img\reading.png")
   title = models.CharField(max_length=100)
   body = models.CharField(max_length=1000000)
   created_at = models.DateTimeField(default=datetime.now, blank=True)
@@ -253,6 +255,7 @@ class BTTwoPost(models.Model):
     return self.title
 
 class BTThreePost(models.Model):
+  img = models.ImageField(upload_to='pics/', default="C:\DjangoStuff\baaleiteshuva\baaleit\static\assets\img\reading.png")
   title = models.CharField(max_length=100)
   body = models.CharField(max_length=1000000)
   created_at = models.DateTimeField(default=datetime.now, blank=True)
