@@ -18,7 +18,8 @@
 
           <div class="col-md-6 col-lg-4">
             <div class="block-blog text-left">
-              <a><img src="{% static 'assets/img/blog/blog-image-1.jpg' %}" alt="img"></a>
+              <!-- <a><img src="{% static 'assets/img/blog/blog-image-1.jpg' %}" alt="img"></a> -->
+              <a><img src="{{post.img.url}}" alt="img"></a>
               <div class="content-blog">
                 <h4>
                   <h4>{{post.title}}</h4>
