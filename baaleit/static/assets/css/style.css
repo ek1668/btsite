@@ -481,6 +481,11 @@ span {
     font-size: 28px;
     line-height: 36px;
   }
+ 
+  #hero .hero-container {
+    justify-content: space-around;
+  }
+
 }
 
 #hero h2 {
