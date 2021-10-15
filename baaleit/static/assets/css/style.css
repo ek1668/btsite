@@ -402,8 +402,11 @@ span {
   /* background: url('../img/btbluebrown.png') center no-repeat fixed; */
   /* background: url('../img/rfulstar.png') center no-repeat fixed; */
   background: url('../img/BTDARKBLUE1.png') center no-repeat fixed;
-
-  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+ 
+ /* background-size: cover;*/
   position: relative;
   margin-top: 40px;
   
