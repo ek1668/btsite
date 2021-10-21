@@ -397,20 +397,31 @@ span {
 
 
 #hero {
-  width: 100%;
-  height: calc(100vh - 40px);
+ /* width: 100%;
+  height: calc(100vh - 40px);*/
   /* background: url('../img/btbluebrown.png') center no-repeat fixed; */
   /* background: url('../img/rfulstar.png') center no-repeat fixed; */
-  background: url('../img/BTDARKBLUE1.png') center fixed no-repeat;
+  
+  
+ 
+  
+  
+  width: 100%;
+  height: calc(100vh - 40px);
+  
+ /* position: fixed;*/
+  /*background: url('../img/BTDARKBLUE1.png') fixed no-repeat center center;
   /*background: url('../img/BTDARKBLUE1JPG.jpg') 0 0;*/
   /*background-repeat: no-repeat;*/
     
-  -webkit-background-size: cover;
+ /* -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   
-  /*background-size: cover;*/
-  position: relative;
+  background-size: cover;*/
+ /* background-attachment: fixed;
+
+  /*position: relative;*/
   margin-top: 40px;
   
   
@@ -439,12 +450,13 @@ span {
 }
 
 #hero .hero-container {
- /* background: url('../img/BTDARKBLUE1.png') fixed no-repeat center;
+  z-index: -10;
+  background: url('../img/BTDARKBLUE1.png') no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;*/
-  position: absolute;
+  background-size: cover;
+  position: fixed;
   margin-top: 40px;
   bottom: 0;
   top: 0;
@@ -493,6 +505,10 @@ span {
   #hero h1 {
     font-size: 28px;
     line-height: 36px;
+  }
+
+  #hero .hero-container {
+    justify-content: space-around;
   }
 }
 
@@ -1239,12 +1255,25 @@ section {
 /* Newsletter Section
 --------------------------------*/
 #newsletter {
-  background: rgba(0, 0, 0, 0) url(../img/BTDARKBLUE1.png) no-repeat center top fixed;
+  background: rgba(0, 0, 0, 0) url(../img/BTDARKBLUE1.png) no-repeat center;
   background-size: cover;
+  width: 100%;
 }
 
+@media (min-width: 600px) {
+  #newsletter {
+  background: rgba(0, 0, 0, 0) url(../img/BTDARKBLUE1.png) no-repeat center top fixed;
+  background-size: cover;
+  width: 100%;
+}
+ }
+
 #newsletter .overlay {
+  /*z-index: -10;*/  
   background: linear-gradient(rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.2) 95%);
+ /* background: url(../img/BTDARKBLUE1.png) no-repeat center top;*/ 
+  background-size: cover;
+  /*position: fixed;*/
   height: 100%;
   width: 100%;
 }
