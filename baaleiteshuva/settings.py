@@ -25,7 +25,7 @@ SECRET_KEY = '0y%)2$t$rs#mn&0@(#bn3ku&+5p#4byn4tud=u9+ffkga6f9_@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ekrayz.pythonanywhere.com']
+ALLOWED_HOSTS = ['ekrayz.pythonanywhere.com', 'localhost']
 
 
 # Application definition
@@ -74,13 +74,22 @@ WSGI_APPLICATION = 'baaleiteshuva.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'btsite',
+        'USER': 'root',
+        'PASSWORD': 'Stromae123',
+        'HOST': '',
+        'PORT': ''
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
